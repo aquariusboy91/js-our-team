@@ -77,7 +77,7 @@ console.log(container_card);
     team_card.append(card_text);
 
     //inserisco titolo e paragrafo all'interno di card text
-    card_text.append(team[key].name);
+    card_text.innerHTML = `<h3> ${team[key].name} </h3>`;
     card_text.append(team[key].role);
 
     //aggiungo la classe team card ai div team card
