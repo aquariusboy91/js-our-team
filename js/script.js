@@ -98,6 +98,7 @@ console.log(container_card);
 
     //aggiungo la classe card text ai div card text
     card_text.classList.add("card-text");
+
    
     console.log(team_card);
    
@@ -119,8 +120,28 @@ console.log(container_card);
       image: "ciao"
     }
     team.push(newcard);
+    let team_card = document.createElement("div");
+    team_card.classList.add("team-card");
+   
+    let card_text = document.createElement("div");
+    card_text.classList.add("card-text");
+
+    let card_image = document.createElement("div");
+
+    let img = document.createElement("img");
     
+    img.src = "new-team-member-01.jpg";
+
+    container_card.append(team_card);
+    team_card.append(card_image);
+    team_card.append(card_text);
+    card_image.append(img);
+
+    card_text.innerHTML = `<h3>${newcard.name}</h3>`;
+    card_text.append(newcard.role);
+
     console.log(team);
+    console.log(team_card);
   });
 
 
